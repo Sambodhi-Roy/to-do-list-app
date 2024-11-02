@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tasks.forEach((task) => renderTask(task));
 
+  todoInput.addEventListener("input", () => {
+    todoInput.classList.remove("bg-gray-200");
+    todoInput.classList.add("bg-white");
+  });
+
   addTaskBtn.addEventListener("click", () => {
     const taskText = todoInput.value.trim();
     if (taskText === "") return;
